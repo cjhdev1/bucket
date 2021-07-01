@@ -9,7 +9,7 @@ class Script
     static void Main(string[] args)
     {
         bool exit = false;
-        var stack = new Stack(10);
+        var stack = new Stack(10); // Limits to how big the stack can get.
 
         while(!exit)
         {
