@@ -3,6 +3,7 @@ import java.util.*;
 public class StackDataStructure {
 	public static void main(String[] args)
 	{
+		System.out.println("in stack data");
 		Stack<String> exampleStack = new Stack<>();
 		exampleStack.push("Example 1");
 		exampleStack.push("Example 2");
