@@ -1,4 +1,7 @@
-﻿using System;
+﻿// If there is a packages.json error on first build then goto Nuget Package Console and type "dotnet restore"
+
+using System;
+using System.Collections;
 
 namespace CSharpExamples
 {
@@ -10,7 +13,8 @@ namespace CSharpExamples
             while (true)
             {
                 Console.WriteLine("1. Linked Lists");
-                Console.WriteLine("2. Stack Data Structure");
+                Console.WriteLine("2. Stack Data Structure (FILO)");
+                Console.WriteLine("3. Queue (FIFO)");
                 Console.WriteLine("99. Quit");
 
                 Console.Write("Choice: ");
@@ -29,6 +33,9 @@ namespace CSharpExamples
                         break;
                     case 2:
                         StackDataStructureMenu();
+                        break;
+                    case 3:
+                        QueuePlaying();
                         break;
                 }
 
@@ -179,6 +186,55 @@ namespace CSharpExamples
 
                     Console.WriteLine();
                 }
+            }
+
+            static void QueuePlaying()
+            {
+                Queue myQueue = new Queue();
+                myQueue.Enqueue(100);
+                myQueue.Enqueue(200);
+                myQueue.Enqueue(300);
+                myQueue.Enqueue(400);
+                myQueue.Enqueue(500);
+                myQueue.Enqueue("This is a string example");
+                myQueue.Enqueue(null);
+
+                Console.WriteLine("Number in the Queue: " + myQueue.Count);
+
+                // If you want to just see the next value but not remove it then use "peek"
+                foreach (var element in myQueue)
+                {
+                    Console.WriteLine(element);
+                }
+
+                // Dequeue will retrieve the first one entered and then remove it from the list
+                while(myQueue.Count > 0)
+                {
+                    Console.WriteLine("Popping off the queue: " + myQueue.Dequeue());
+                }
+
+                // Should be 0 now
+                Console.WriteLine("Number in the Queue: " + myQueue.Count);
+
+                /************
+                 *  Output:
+                        Number in the Queue: 7
+                        100
+                        200
+                        300
+                        400
+                        500
+                        This is a string example
+
+                        Popping off the queue: 100
+                        Popping off the queue: 200
+                        Popping off the queue: 300
+                        Popping off the queue: 400
+                        Popping off the queue: 500
+                        Popping off the queue: This is a string example
+                        Popping off the queue:
+                        Number in the Queue: 0
+                 ************/
             }
         }
     }
