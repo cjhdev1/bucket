@@ -19,7 +19,7 @@ public class StackDataStructure {
 		System.out.println("Example stack search found here: " + searchStack);
 		
 		// This will print the stack from the bottom up (first in to last in)
-		for (Iterator iterator = exampleStack.iterator(); iterator.hasNext();) {
+		for (Iterator<String> iterator = exampleStack.iterator(); iterator.hasNext();) {
 			String string = (String) iterator.next();
 			System.out.println("Test1: " + string);
 		}

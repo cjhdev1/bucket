@@ -1,12 +1,10 @@
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.ListIterator;
-import java.util.Stack;
 
 public class LinkedLists {
 	public static void main(String[] args)
 	{
-		LinkedList NamesLinkLists = new LinkedList();
+		LinkedList<String> NamesLinkLists = new LinkedList<String>();
 		
 		NamesLinkLists.add("John");
 		NamesLinkLists.add("Matt");
