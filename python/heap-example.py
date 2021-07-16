@@ -7,18 +7,24 @@
 # Not stable
 # Not really adaptive (Doesn't get faster if given somewhat sorted array)
 
+# Node at index i
+# Left child is at 2 * i
+# Right child is at 2 * i + 1
+# Parent is at i / 2
+
 '''
 Example
-     1
+a b c d e f g
+1 2 3 4 5 6 7
+     a
     / \
-   /   \
-  2     \
- / \     3
-4   5   / \
-       9   \
-            8
-           / \
-          6   7
+   b   c
+  /     \
+ / \     \
+d   e   / \
+       f   g
+
+If i = 4(d), what is the parent? 4 / 2, b is at position 2, so b is parent of d
 '''
 import heapq
 
