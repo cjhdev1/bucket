@@ -1,5 +1,5 @@
 # https://en.wikipedia.org/wiki/Heap_(data_structure)
-# 
+
 # Disadvantages
 # 
 # Relatively slow as compared to Quicksort
