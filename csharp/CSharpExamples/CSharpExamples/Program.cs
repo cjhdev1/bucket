@@ -15,6 +15,7 @@ namespace CSharpExamples
                 Console.WriteLine("1. Linked Lists");
                 Console.WriteLine("2. Stack Data Structure (FILO)");
                 Console.WriteLine("3. Queue (FIFO)");
+                Console.WriteLine("4. HeapSort and Search Example");
                 Console.WriteLine("99. Quit");
 
                 Console.Write("Choice: ");
@@ -36,6 +37,9 @@ namespace CSharpExamples
                         break;
                     case 3:
                         QueuePlaying();
+                        break;
+                    case 4:
+                        HeapPlaying();
                         break;
                 }
 
@@ -235,6 +239,65 @@ namespace CSharpExamples
                         Popping off the queue:
                         Number in the Queue: 0
                  ************/
+            }
+
+            static void HeapPlaying()
+            {
+                Random rnd = new Random();
+
+                Console.Write("Enter # of ints to generate: ");
+                int numInts = Int32.Parse(Console.ReadLine());
+                IComparable[] array = new IComparable[numInts];
+                IComparable[] array2 = new IComparable[numInts];
+
+                for (int index = 0; index < array.Length; index++)
+                {
+                    array[index] = (IComparable)rnd.Next(array.Length);
+                    array2[index] = array[index];
+                }
+
+                Console.WriteLine("Sorting the array.");
+                Sorter.HeapSort(array2, array2.Length);
+
+                bool goAgain = true;
+
+                while(goAgain)
+                {
+                    goAgain = false;
+
+                    Console.Write("Enter target int: ");
+                    int target = Int32.Parse(Console.ReadLine());
+
+                    int position = Searcher.SequentialSearch((IComparable)target, array, array.Length);
+                    if (position > 0)
+                    {
+                        Console.WriteLine(target + " found at index " + position + " in the unsorted array.");
+                    }
+                    else
+                    {
+                        Console.WriteLine(target + " not found.");
+                    }
+
+                    position = Searcher.BinarySearch((IComparable)target, array2, 0, array2.Length - 1);
+                    if (position > 0)
+                    {
+                        Console.WriteLine(target + " found at index " + position + " in the sorted array.");
+                    }
+                    else
+                    {
+                        Console.WriteLine(target + " not found.");
+                    }
+                }
+
+                /**********
+                 *  OUTPUT:
+                     *  Choice: 4
+                        Enter # of ints to generate: 100000000
+                        Sorting the array.
+                        Enter target int: 1
+                        1 found at index 26438847 in the unsorted array.
+                        1 found at index 99999999 in the sorted array.
+                ********/
             }
         }
     }
