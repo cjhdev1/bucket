@@ -27,21 +27,32 @@ class Result
     public static int countingValleys(int steps, string path)
     {
         int seaLevel = 0;
-        int valleyCount = -1;
+        int valleyCount = 0;
         int stepProgress = 0;
+		
+		// Forgot at first to signify if I was on a Mountain or in a Valley
+        string ValleyOrMountain = "";
         
         foreach(char ch in path)
         {
             if(ch.ToString().ToUpper() == "U")
             {
                 stepProgress++;
+                if(stepProgress > 0)
+                {
+                    ValleyOrMountain = "Mountain";
+                }
             }
             else
             {
                 stepProgress--;
+                if(stepProgress < 0)
+                {
+                    ValleyOrMountain = "Valley";
+                }
             }
             
-            if(stepProgress == seaLevel)
+            if(stepProgress == seaLevel && ValleyOrMountain == "Valley")
             {
                 valleyCount++;
             }
