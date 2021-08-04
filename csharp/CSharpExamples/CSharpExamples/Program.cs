@@ -16,6 +16,9 @@ namespace CSharpExamples
                 Console.WriteLine("2. Stack Data Structure (FILO)");
                 Console.WriteLine("3. Queue (FIFO)");
                 Console.WriteLine("4. HeapSort and Search Example");
+                Console.WriteLine("5. LeetCode Max Consecutive Ones");
+                Console.WriteLine("6. Find Numbers with Even Number of Digits");
+                Console.WriteLine("7. Squares of a Sorted Array");
                 Console.WriteLine("99. Quit");
 
                 Console.Write("Choice: ");
@@ -40,6 +43,24 @@ namespace CSharpExamples
                         break;
                     case 4:
                         HeapPlaying();
+                        break;
+                    case 5:
+                        MaxConsecutiveOnes p = new MaxConsecutiveOnes();
+                        int[] nums = new int[] { 1, 1, 0, 1, 1, 1 };
+                        int Solution = p.FindMaxConsecutiveOnes(nums);
+                        Console.WriteLine(Solution);
+                        break;
+                    case 6:
+                        FindNumbersWithEvenNumberOfDigits p2 = new FindNumbersWithEvenNumberOfDigits();
+                        int[] nums2 = new int[] { 12, 345, 2, 6, 7896 };
+                        int Solution2 = p2.FindNumbers(nums2);
+                        Console.WriteLine(Solution2);
+                        break;
+                    case 7:
+                        SquaresOfASortedArray p3 = new SquaresOfASortedArray();
+                        int[] nums3 = new int[] { -4, -1, 0, 3, 10 };
+                        int[] Solution3 = p3.SortedSquares(nums3);
+                        Console.WriteLine("[{0}]", string.Join(", ", Solution3));
                         break;
                 }
 
