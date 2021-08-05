@@ -68,6 +68,14 @@ namespace CSharpExamples
                         int[] nums4 = new int[] {1, 0, 2, 3, 0, 4, 5, 0};
                         p4.DuplicateZerosCall(nums4);
                         break;
+                    case 9:
+                        MergeSortedArray p5 = new MergeSortedArray();
+                        int[] nums5 = new int[] { 1, 2, 3, 0, 0, 0 };
+                        int[] nums6 = new int[] { 2, 5, 6 };
+                        int n = 3;
+                        int m = 3;
+                        p5.Merge(nums5, m, nums6, n);
+                        break;
                 }
 
 
