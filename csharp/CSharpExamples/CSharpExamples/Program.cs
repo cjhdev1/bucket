@@ -19,7 +19,7 @@ namespace CSharpExamples
                 Console.WriteLine("5. LeetCode: Max Consecutive Ones");
                 Console.WriteLine("6. LeetCode: Find Numbers with Even Number of Digits");
                 Console.WriteLine("7. LeetCode: Squares of a Sorted Array");
-                Console.WriteLine("7. LeetCode: Duplicate Zeros");
+                Console.WriteLine("8. LeetCode: Duplicate Zeros");
                 Console.WriteLine("99. Quit");
 
                 Console.Write("Choice: ");
