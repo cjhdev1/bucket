@@ -16,9 +16,10 @@ namespace CSharpExamples
                 Console.WriteLine("2. Stack Data Structure (FILO)");
                 Console.WriteLine("3. Queue (FIFO)");
                 Console.WriteLine("4. HeapSort and Search Example");
-                Console.WriteLine("5. LeetCode Max Consecutive Ones");
-                Console.WriteLine("6. Find Numbers with Even Number of Digits");
-                Console.WriteLine("7. Squares of a Sorted Array");
+                Console.WriteLine("5. LeetCode: Max Consecutive Ones");
+                Console.WriteLine("6. LeetCode: Find Numbers with Even Number of Digits");
+                Console.WriteLine("7. LeetCode: Squares of a Sorted Array");
+                Console.WriteLine("7. LeetCode: Duplicate Zeros");
                 Console.WriteLine("99. Quit");
 
                 Console.Write("Choice: ");
@@ -61,6 +62,11 @@ namespace CSharpExamples
                         int[] nums3 = new int[] { -4, -1, 0, 3, 10 };
                         int[] Solution3 = p3.SortedSquares(nums3);
                         Console.WriteLine("[{0}]", string.Join(", ", Solution3));
+                        break;
+                    case 8:
+                        DuplicateZeros p4 = new DuplicateZeros();
+                        int[] nums4 = new int[] {1, 0, 2, 3, 0, 4, 5, 0};
+                        p4.DuplicateZerosCall(nums4);
                         break;
                 }
 
