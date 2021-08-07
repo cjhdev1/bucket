@@ -20,7 +20,9 @@ namespace CSharpExamples
                 Console.WriteLine("6. LeetCode: Find Numbers with Even Number of Digits");
                 Console.WriteLine("7. LeetCode: Squares of a Sorted Array");
                 Console.WriteLine("8. LeetCode: Duplicate Zeros");
-                Console.WriteLine("9. LeetCode: Remove Element");
+                Console.WriteLine("9. LeetCode: Merge Sorted Array");
+                Console.WriteLine("10. LeetCode: Remove Element");
+                Console.WriteLine("11. LeetCode: Remove Duplicates From Sorted Array");
                 Console.WriteLine("99. Quit");
 
                 Console.Write("Choice: ");
@@ -82,6 +84,12 @@ namespace CSharpExamples
                         int[] nums7 = new int[] { 3, 2, 2, 3 };
                         int nums8 = 3;
                         p6.RemoveElementNow(nums7, nums8);
+                        break;
+                    case 11:
+                        RemoveDuplicatesFromSortedArray p7 = new RemoveDuplicatesFromSortedArray();
+                        int[] nums9 = new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
+                        int nums10 = p7.RemoveDuplicates(nums9);
+                        Console.WriteLine(nums10);
                         break;
                 }
 
