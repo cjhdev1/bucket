@@ -23,6 +23,7 @@ namespace CSharpExamples
                 Console.WriteLine("9. LeetCode: Merge Sorted Array");
                 Console.WriteLine("10. LeetCode: Remove Element");
                 Console.WriteLine("11. LeetCode: Remove Duplicates From Sorted Array");
+                Console.WriteLine("12. LeetCode: Check If N and Its Double Exist");
                 Console.WriteLine("99. Quit");
 
                 Console.Write("Choice: ");
@@ -90,6 +91,12 @@ namespace CSharpExamples
                         int[] nums9 = new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
                         int nums10 = p7.RemoveDuplicates(nums9);
                         Console.WriteLine(nums10);
+                        break;
+                    case 12:
+                        CheckIfNAndItsDoubleExist p8 = new CheckIfNAndItsDoubleExist();
+                        int[] nums11 = new int[] { 10, 2, 5, 3 };
+                        bool Result1 = p8.CheckIfExist(nums11);
+                        Console.WriteLine(Result1);
                         break;
                 }
 
