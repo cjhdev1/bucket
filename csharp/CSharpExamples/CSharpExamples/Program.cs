@@ -24,6 +24,7 @@ namespace CSharpExamples
                 Console.WriteLine("10. LeetCode: Remove Element");
                 Console.WriteLine("11. LeetCode: Remove Duplicates From Sorted Array");
                 Console.WriteLine("12. LeetCode: Check If N and Its Double Exist");
+                Console.WriteLine("13. LeetCode: Valid Mountain Array");
                 Console.WriteLine("99. Quit");
 
                 Console.Write("Choice: ");
@@ -97,6 +98,12 @@ namespace CSharpExamples
                         int[] nums11 = new int[] { 10, 2, 5, 3 };
                         bool Result1 = p8.CheckIfExist(nums11);
                         Console.WriteLine(Result1);
+                        break;
+                    case 13:
+                        CheckIfNAndItsDoubleExist p9 = new CheckIfNAndItsDoubleExist();
+                        int[] nums13 = new int[] { 2, 1 };
+                        bool Result2 = p9.CheckIfExist(nums13);
+                        Console.WriteLine(Result2);
                         break;
                 }
 
