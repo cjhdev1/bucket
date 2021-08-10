@@ -25,6 +25,7 @@ namespace CSharpExamples
                 Console.WriteLine("11. LeetCode: Remove Duplicates From Sorted Array");
                 Console.WriteLine("12. LeetCode: Check If N and Its Double Exist");
                 Console.WriteLine("13. LeetCode: Valid Mountain Array");
+                Console.WriteLine("14. LeetCode: Replace Elements With Greatest Element On Right Side");
                 Console.WriteLine("99. Quit");
 
                 Console.Write("Choice: ");
@@ -104,6 +105,12 @@ namespace CSharpExamples
                         int[] nums13 = new int[] { 2, 1 };
                         bool Result2 = p9.CheckIfExist(nums13);
                         Console.WriteLine(Result2);
+                        break;
+                    case 14:
+                        ReplaceElementsWithGreatestElementOnRightSide p10 = new ReplaceElementsWithGreatestElementOnRightSide();
+                        int[] nums14 = new int[] { 17, 18, 5, 4, 6, 1 };
+                        int[] Result3 = p10.ReplaceElements(nums14);
+                        Console.WriteLine("[{0}]", string.Join(", ", Result3));
                         break;
                 }
 
